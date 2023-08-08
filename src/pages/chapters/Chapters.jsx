@@ -2,7 +2,6 @@ import React from 'react'
 import data from '../../images'
 import { useState,useEffect,useRef } from 'react'
 import { AnimatePresence, delay, motion } from 'framer-motion' 
-import WaterDropGrid from '../../components/WaterDrop'
 
 function Chapters () {
   const [width,setWidth] = useState(0)
@@ -23,7 +22,7 @@ function Chapters () {
           >
             {data.map((item) =>{
               return(
-                <motion.div className='rounded-md m-4  bg-slate-600 justify-center h-fit p-6 items-center min-w-[45vh]' key={item}>
+                <motion.div className='rounded-md m-4  bg-slate-600 justify-center min-h-fit   p-6 items-center min-w-[45vh]' key={item}>
                   <div className='flex justify-center p-10 min-w-full'>
                     <img className='w-1/2 ' src={item.src}/>
                   </div>
