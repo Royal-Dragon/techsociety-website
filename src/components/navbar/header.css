@@ -1,0 +1,117 @@
+.navigation {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.8rem 0rem;
+    background-color: #030f26;
+    background: linear-gradient(180deg, rgba(3, 15, 38, 1) 0%,rgba(3, 15, 38, 0.073) 75%, rgba(255, 255, 255, 0) 100%);
+    animation: slide-down 0.4s ease;
+    -webkit-animation: slide-down 0.4s ease;
+}
+@keyframes slide-down {
+    from {top:-60px;}
+    to {top:0px;}
+}
+
+.brand-name {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Tektur', cursive;
+    color: #efefef;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 0.2rem;
+    margin-left: 1rem;
+    transition: all 0.25s;
+}
+.brand-name:hover{
+    transform: scale(1.05);
+    text-shadow: 0 2px 2px #efefef;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+.navigation-menu {
+    margin-left: auto;
+}
+.navigation-menu ul {
+    display: flex;
+    padding: 0;
+    margin-right: 1rem;
+}
+
+.navigation-menu li {
+    list-style-type: none;
+    margin: 0 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.25s;
+}
+.navigation-menu li:hover{
+    transform: scale(1.05);
+    text-shadow: 0 1px 2px #efefef;
+}
+.active{
+    font-weight: 600;
+    color: aqua;
+}
+
+.navigation-menu li a {
+    text-decoration: none;
+    color: #efefef;
+    display: block;
+    width: 100%;
+}
+.hamburger {
+    border: 0;
+    height: 40px;
+    width: 40px;
+    padding: 0.5rem;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-55%);
+    display: none;
+}
+
+@media screen and (max-width: 842px) {
+    .brand-name{
+        font-size: 1.6rem;
+    }
+    .hamburger {
+        display: block;
+    }
+    .navigation-menu ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh - 77px);
+        display: none;
+        background-color: rgba(3, 15, 38, 0.94);
+    }
+    .expanded ul {
+        display: block;
+    }
+    .navigation-menu li {
+        text-align: center;
+        margin: 0;
+        border-bottom: solid 1px white;
+        transition: all 0.3s ease;
+    }
+    .navigation-menu li:hover>.navigation-menu li a{
+        transform: scale(1.2);
+}
+    .navigation-menu li a {
+        width: 100%;
+        padding: 1.5rem 0;
+    }
+}
