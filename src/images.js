@@ -1,6 +1,5 @@
 
 import image1 from "./assets/tars-trans.gif" 
-import image2 from "./assets/meta.png" 
 const data=[
     {name:"tars", desc: "the TARS society", src:image1},
     {name:"psoc", desc: "the PSOC Society", src:image1},
